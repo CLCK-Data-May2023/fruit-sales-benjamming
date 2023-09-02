@@ -1,7 +1,10 @@
 import pandas as pd
 
-fruit_sales = pd.DataFrame(((35,21), (41,34)), 
-             columns=("Apples", "Bananas"), 
+data = {"Apples":[35, 41], "Bananas": [21, 34]}
+
+fruit_sales = pd.DataFrame(data, 
              index=("2017 Sales", "2018 Sales"))
 
-fruit_sales.to_csv("fruit.csv")
+
+if __name__ == "__main__":
+    fruit_sales.to_csv("fruit.csv")
